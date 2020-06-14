@@ -20,9 +20,6 @@ app.get("/", (req, res) => {
     res.send("Hello world");
   });
 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
-
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
   });

@@ -2,11 +2,18 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const BookSchema = new Schema({
-  author: String,
-  title: String
+const WorkoutSchema = new Schema({
+    date: {
+        type: Date,
+        default: Date.now
+      },
+    type: {
+        type: String,
+        trim: true,
+        required: "Enter an exercise type"
+      },
 });
 
-const Book = mongoose.model("Book", BookSchema);
+const Book = mongoose.model("Workout", WorkoutSchema);
 
 module.exports = Book;
